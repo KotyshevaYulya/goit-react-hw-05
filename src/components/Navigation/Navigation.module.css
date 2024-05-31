@@ -1,0 +1,15 @@
+.containerNavigation {
+    display: flex;
+    gap: 12px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.active {
+    color: orange;
+    text-decoration: underline;
+}
