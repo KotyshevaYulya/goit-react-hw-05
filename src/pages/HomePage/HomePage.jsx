@@ -20,7 +20,7 @@ export default function HomePage() {
 
     return (
             <div>
-            <h2>Trending movies</h2>
+            <h2>Trending movies:</h2>
             {isLoading && <p>Loading...</p>}
             <MovieList movies={movies} />
             </div>
