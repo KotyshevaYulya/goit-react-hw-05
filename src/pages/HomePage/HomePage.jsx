@@ -16,7 +16,6 @@ export default function HomePage() {
         
     }, []);
     
-    // console.log(movies);
 
     return (
             <div>

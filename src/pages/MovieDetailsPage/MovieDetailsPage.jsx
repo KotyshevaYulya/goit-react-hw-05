@@ -11,15 +11,14 @@ export default function MovieDetailsPage() {
     const [isLoading, setIsLoading] = useState(false);
 
     const location = useLocation(); 
-    const backLinkRef = useRef(location.state ?? "/movies ");
-
+    const backLinkRef = useRef(location.state ?? "/movies");
 
     useEffect(() => {
         setIsLoading(true);
         getMovieById(movieId)
             .then(data => setMovie(data))
             .catch(error => { console.log("Error") })
-            .finally(setIsLoading(false))
+            .finally(() => setIsLoading(false))
     }, [movieId])
 
     return (
@@ -32,7 +31,7 @@ export default function MovieDetailsPage() {
                     <NavLink to="cast">Cast</NavLink>
                 </li> 
                 <li>
-                    <NavLink to="review">Review</NavLink>
+                    <NavLink to="review">Reviews</NavLink>
                 </li>
             </ul>
             <Suspense fallback={<div>Loading...</div>}>

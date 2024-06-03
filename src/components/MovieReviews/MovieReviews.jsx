@@ -13,7 +13,7 @@ export default function MovieCoast() {
         getMovieReview(movieId)
             .then(data => setReview(data))
             .catch(error => { console.log("Error") })
-            .finally(setIsLoading(false))
+            .finally(() => setIsLoading(false))
     }, [movieId])
     
     return (
